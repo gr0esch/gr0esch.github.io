@@ -28,7 +28,7 @@ menu:
           weight: 4     
 
 params:
-    description: "I am a postgraduate student in Data & Society at the London School of Economics and Political Science. I hold a Bachelor in Communication & Politics from Zeppelin University."
+    description: "I am a Research and Teaching Associate in the Media & Internet Governance Division at the University of Zurich. I hold an MSc in Data & Society from LSE and a BA in Communication & Politics from Zeppelin University."
     author: Samuel Groesch
     DateFormat: "January 2006"
     defaultTheme: light
@@ -52,8 +52,8 @@ params:
     profileMode:
           enabled: true
           title: Samuel Groesch
-          subtitle: "I am a postgraduate student in Data & Society at the London School of Economics and Political Science. I hold a Bachelor in Communication & Politics from Zeppelin University."
-          imageUrl: "/picture.jpg"
+          subtitle: "I am a Research and Teaching Associate in the Media & Internet Governance Division at the University of Zurich, holding an MSc in Data & Society from LSE and a BA in Communication & Politics from Zeppelin University. My research interests include platform governance, data protection and the evaluation of harmful online content, as well as computational methods."
+          imageUrl: "/picture_new.jpg"
           imageWidth: 170
           imageHeight: 170
           imageTitle: Samuel Groesch
@@ -68,7 +68,9 @@ params:
         # - name: CV
         #   url: "/cv.pdf"
         - name: Email
-          url: "mailto:info@samuelgroesch.de"
+          url: "mailto:s.groesch@ikmz.uzh.ch"
+        - name: Google Scholar
+          url: "https://www.ikmz.uzh.ch/en/research/divisions/media-and-internet-governance/team/samuel-groesch.html"
         - name: Twitter
           url: "https://twitter.com/samuelgroesch"
         - name: GitHub
