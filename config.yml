@@ -69,7 +69,7 @@ params:
         #   url: "/cv.pdf"
         - name: Email
           url: "mailto:s.groesch@ikmz.uzh.ch"
-        - name: Google Scholar
+        - name: CV
           url: "https://www.ikmz.uzh.ch/en/research/divisions/media-and-internet-governance/team/samuel-groesch.html"
         - name: Twitter
           url: "https://twitter.com/samuelgroesch"
