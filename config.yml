@@ -28,7 +28,7 @@ menu:
           weight: 4     
 
 params:
-    description: "I am a Research and Teaching Associate in the Media & Internet Governance Division at the University of Zurich. I hold an MSc in Data & Society from LSE and a BA in Communication & Politics from Zeppelin University."
+    description: "I am a Research and Teaching Associate in the Media & Internet Governance Division at the University of Zurich. <br>I hold an MSc in Data & Society from LSE and a BA in Communication & Politics from Zeppelin University."
     author: Samuel Groesch
     DateFormat: "January 2006"
     defaultTheme: light
@@ -73,6 +73,8 @@ params:
           url: "https://www.ikmz.uzh.ch/en/research/divisions/media-and-internet-governance/team/samuel-groesch.html"
         - name: Twitter
           url: "https://twitter.com/samuelgroesch"
+        - name: "linkedin"
+          url: "https://www.linkedin.com/in/samuelgroesch/"
         - name: GitHub
           url: "https://github.com/gr0esch"
 
