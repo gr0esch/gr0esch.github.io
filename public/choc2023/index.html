@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en" dir="auto">
+
+<head><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="index, follow">
+<title>CHOC2023 | Samuel Groesch</title>
+<meta name="keywords" content="">
+<meta name="description" content="Contact Reproduction code and analyses available on request: s.groesch@ikmz.uzh.ch Topics – Far-Right dataset Timewise development Links The representation of all topics can be accessed here .
+Topics – Protesters dataset Timewise development Links The representation of all topics can be accessed here .
+Topics – Joint dataset Timewise development Links The representation of all topics can be accessed here .">
+<meta name="author" content="Samuel Groesch">
+<link rel="canonical" href="https://gr0esch.github.io/choc2023/">
+<link crossorigin="anonymous" href="/assets/css/stylesheet.c2d92e26b63b12cd5063e1975cc4b91ecbeaff701976ba6e4534a183551e47c2.css" integrity="sha256-wtkuJrY7Es1QY&#43;GXXMS5Hsvq/3AZdrpuRTShg1UeR8I=" rel="preload stylesheet" as="style">
+<link rel="icon" href="https://gr0esch.github.io/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="https://gr0esch.github.io/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="https://gr0esch.github.io/favicon-32x32.png">
+<link rel="apple-touch-icon" href="https://gr0esch.github.io/apple-touch-icon.png">
+
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<noscript>
+    <style>
+        #theme-toggle,
+        .top-link {
+            display: none;
+        }
+
+    </style>
+</noscript><meta property="og:title" content="CHOC2023" />
+<meta property="og:description" content="Contact Reproduction code and analyses available on request: s.groesch@ikmz.uzh.ch Topics – Far-Right dataset Timewise development Links The representation of all topics can be accessed here .
+Topics – Protesters dataset Timewise development Links The representation of all topics can be accessed here .
+Topics – Joint dataset Timewise development Links The representation of all topics can be accessed here ." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://gr0esch.github.io/choc2023/" /><meta property="article:section" content="" />
+
+
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="CHOC2023"/>
+<meta name="twitter:description" content="Contact Reproduction code and analyses available on request: s.groesch@ikmz.uzh.ch Topics – Far-Right dataset Timewise development Links The representation of all topics can be accessed here .
+Topics – Protesters dataset Timewise development Links The representation of all topics can be accessed here .
+Topics – Joint dataset Timewise development Links The representation of all topics can be accessed here ."/>
+<meta name="twitter:site" content="@samuelgroesch"/>
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position":  1 ,
+      "name": "CHOC2023",
+      "item": "https://gr0esch.github.io/choc2023/"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "CHOC2023",
+  "name": "CHOC2023",
+  "description": "Contact Reproduction code and analyses available on request: s.groesch@ikmz.uzh.ch Topics – Far-Right dataset Timewise development Links The representation of all topics can be accessed here .\nTopics – Protesters dataset Timewise development Links The representation of all topics can be accessed here .\nTopics – Joint dataset Timewise development Links The representation of all topics can be accessed here .",
+  "keywords": [
+    
+  ],
+  "articleBody": "Contact Reproduction code and analyses available on request: s.groesch@ikmz.uzh.ch Topics – Far-Right dataset Timewise development Links The representation of all topics can be accessed here .\nTopics – Protesters dataset Timewise development Links The representation of all topics can be accessed here .\nTopics – Joint dataset Timewise development Links The representation of all topics can be accessed here .\n",
+  "wordCount" : "60",
+  "inLanguage": "en",
+  "datePublished": "0001-01-01T00:00:00Z",
+  "dateModified": "0001-01-01T00:00:00Z",
+  "author":{
+    "@type": "Person",
+    "name": "Samuel Groesch"
+  },
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://gr0esch.github.io/choc2023/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Samuel Groesch",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://gr0esch.github.io/favicon.ico"
+    }
+  }
+}
+</script>
+
+
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.13.13/dist/katex.min.css" integrity="sha384-RZU/ijkSsFbcmivfdRBQDtwuwVqK7GMOw6IMvKyeWL2K5UAlyp6WonmB8m7Jd0Hn" crossorigin="anonymous">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.13.13/dist/katex.min.js" integrity="sha384-pK1WpvzWVBQiP0/GjnvRxV4mOb0oxFuyRxJlk6vVw146n3egcN5C925NCP7a7BY8" crossorigin="anonymous"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.13.13/dist/contrib/auto-render.min.js" integrity="sha384-vZTG03m+2yp6N6BNi5iM4rW4oIwk5DfcNdFfxkk9ZWpDriOkXX8voJBFrAO7MpVl" crossorigin="anonymous"></script>
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        renderMathInElement(document.body, {
+          
+          
+          delimiters: [
+            {left: '$$', right: '$$', display: true},
+            {left: '$', right: '$', display: false},
+            {left: "\\begin{equation}", right: "\\end{equation}", display: true},
+            {left: "\\begin{equation*}", right: "\\end{equation*}", display: true},
+            {left: "\\begin{align}", right: "\\end{align}", display: true},
+            {left: "\\begin{align*}", right: "\\end{align*}", display: true},
+            {left: "\\begin{alignat}", right: "\\end{alignat}", display: true},
+            {left: "\\begin{gather}", right: "\\end{gather}", display: true},
+            {left: "\\begin{CD}", right: "\\end{CD}", display: true},
+          ],
+          
+          throwOnError : false
+        });
+    });
+</script>
+ 
+
+
+</head>
+
+<body class="" id="top">
+
+<header class="header">
+    <nav class="nav">
+        <div class="logo">
+            <a href="https://gr0esch.github.io/" accesskey="h" title="Samuel Groesch">
+             
+                <img src="https://gr0esch.github.io/favicon.ico" alt="" aria-label="logo"
+                    height="18"
+                    width="18">Samuel Groesch</a>
+            <div class="logo-switches">
+            </div>
+        </div>
+        <ul id="menu">
+        </ul>
+    </nav>
+</header>
+
+    <main class="main">
+
+<article class="post-single">
+  <header class="post-header">
+    
+    <h1 class="post-title">
+      CHOC2023
+    </h1>
+
+    <div class="post-meta">Samuel Groesch
+
+</div>
+  </header> 
+  <div class="post-content"><h3 id="contact">Contact</h3>
+<p>Reproduction code and analyses available on request: <a href="mailto:s.groesch@ikmz.uzh.ch">s.groesch@ikmz.uzh.ch</a>
+</p>
+<hr>
+<h3 id="topics--far-right-dataset">Topics – Far-Right dataset</h3>
+<h4 id="timewise-development">Timewise development</h4>
+<figure>
+    <img loading="lazy" src="/chohc2023/right.png"/> 
+</figure>
+
+<h4 id="links">Links</h4>
+<p>The representation of all topics can be accessed <a href="/choc2023/right_representation.html">here</a>
+.</p>
+<hr>
+<h3 id="topics--protesters-dataset">Topics – Protesters dataset</h3>
+<h4 id="timewise-development-1">Timewise development</h4>
+<figure>
+    <img loading="lazy" src="/chohc2023/quer.png"/> 
+</figure>
+
+<h4 id="links-1">Links</h4>
+<p>The representation of all topics can be accessed <a href="/choc2023/quer_representation.html">here</a>
+.</p>
+<hr>
+<h3 id="topics--joint-dataset">Topics – Joint dataset</h3>
+<h3 id="timewise-development-2">Timewise development</h3>
+<figure>
+    <img loading="lazy" src="/chohc2023/joint.png"/> 
+</figure>
+
+<h3 id="links-2">Links</h3>
+<p>The representation of all topics can be accessed <a href="/choc2023/joint_representation.html">here</a>
+.</p>
+
+  </div>
+
+  <footer class="post-footer">
+    <ul class="post-tags">
+    </ul>
+  </footer>
+</article>
+    </main>
+    
+<footer class="footer">
+
+    <span><a href="https://samuelgroesch.de/impressum/">Impressum</a></span>
+    
+    
+    
+
+</footer>
+
+<script>
+    let menu = document.getElementById('menu')
+    if (menu) {
+        menu.scrollLeft = localStorage.getItem("menu-scroll-position");
+        menu.onscroll = function () {
+            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
+        }
+    }
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            var id = this.getAttribute("href").substr(1);
+            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                    behavior: "smooth"
+                });
+            } else {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
+            }
+            if (id === "top") {
+                history.replaceState(null, null, " ");
+            } else {
+                history.pushState(null, null, `#${id}`);
+            }
+        });
+    });
+
+</script>
+<script>
+    document.querySelectorAll('pre > code').forEach((codeblock) => {
+        const container = codeblock.parentNode.parentNode;
+
+        const copybutton = document.createElement('button');
+        copybutton.classList.add('copy-code');
+        copybutton.innerHTML = 'copy';
+
+        function copyingDone() {
+            copybutton.innerHTML = 'copied!';
+            setTimeout(() => {
+                copybutton.innerHTML = 'copy';
+            }, 2000);
+        }
+
+        copybutton.addEventListener('click', (cb) => {
+            if ('clipboard' in navigator) {
+                navigator.clipboard.writeText(codeblock.textContent);
+                copyingDone();
+                return;
+            }
+
+            const range = document.createRange();
+            range.selectNodeContents(codeblock);
+            const selection = window.getSelection();
+            selection.removeAllRanges();
+            selection.addRange(range);
+            try {
+                document.execCommand('copy');
+                copyingDone();
+            } catch (e) { };
+            selection.removeRange(range);
+        });
+
+        if (container.classList.contains("highlight")) {
+            container.appendChild(copybutton);
+        } else if (container.parentNode.firstChild == container) {
+            
+        } else if (codeblock.parentNode.parentNode.parentNode.parentNode.parentNode.nodeName == "TABLE") {
+            
+            codeblock.parentNode.parentNode.parentNode.parentNode.parentNode.appendChild(copybutton);
+        } else {
+            
+            codeblock.parentNode.appendChild(copybutton);
+        }
+    });
+</script>
+</body>
+</html>

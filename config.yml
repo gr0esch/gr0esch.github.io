@@ -12,20 +12,20 @@ social:
 taxonomies:
     tag: tags
 
-menu:
-    main:
-        - name: Papers
-          url: /papers/
-          weight: 1
-        - name: Courses
-          url: /courses/
-          weight: 2
-        - name: Design
-          url: /design/
-          weight: 3
-        - name: Tags
-          url: /tags/
-          weight: 4     
+# menu:
+#     main:
+        # - name: Papers
+        #   url: /papers/
+        #   weight: 1
+        # - name: Courses
+        #   url: /courses/
+        #   weight: 2
+        # - name: Design
+        #   url: /design/
+        #   weight: 3
+        # - name: Tags
+        #   url: /tags/
+        #   weight: 4     
 
 params:
     description: "I am a Research and Teaching Associate in the Media & Internet Governance Division at the University of Zurich. <br>I hold an MSc in Data & Society from LSE and a BA in Communication & Politics from Zeppelin University."
