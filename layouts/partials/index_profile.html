@@ -33,6 +33,8 @@
         <h1>{{ .title | default site.Title | markdownify }}</h1>
         <span>{{ .subtitle | markdownify }}</span>
 
+        {{- partial "social_icons.html" site.Params.socialIcons -}}
+
         <details class="profile-section">
             <summary>Published articles</summary>
             <div class="profile-section-content">
@@ -51,7 +53,20 @@
             </div>
         </details>
 
-        {{- partial "social_icons.html" site.Params.socialIcons -}}
+        <script>
+        document.querySelectorAll('.profile-section').forEach(function(details) {
+            details.addEventListener('click', function(e) {
+                if (details.open) {
+                    e.preventDefault();
+                    details.classList.add('closing');
+                    details.querySelector('.profile-section-content').addEventListener('animationend', function() {
+                        details.classList.remove('closing');
+                        details.removeAttribute('open');
+                    }, { once: true });
+                }
+            });
+        });
+        </script>
 
         {{- with .buttons }}
         <div class="buttons">

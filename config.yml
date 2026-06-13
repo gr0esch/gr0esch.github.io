@@ -77,6 +77,8 @@ params:
           url: "https://www.linkedin.com/in/samuelgroesch/"
         - name: GitHub
           url: "https://github.com/gr0esch"
+        - name: camera
+          url: "https://samuelgroesch.de"
 
 
 

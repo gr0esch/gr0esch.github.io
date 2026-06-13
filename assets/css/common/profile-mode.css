@@ -111,3 +111,21 @@
 .profile-section-content a:hover {
     text-decoration: underline;
 }
+
+@keyframes expandSection {
+    from { opacity: 0; transform: translateY(-6px); }
+    to   { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes collapseSection {
+    from { opacity: 1; transform: translateY(0); }
+    to   { opacity: 0; transform: translateY(-6px); }
+}
+
+details[open] .profile-section-content {
+    animation: expandSection 0.25s ease-out;
+}
+
+details.closing .profile-section-content {
+    animation: collapseSection 0.2s ease-in forwards;
+}
