@@ -56,7 +56,7 @@
         <script>
         document.querySelectorAll('.profile-section').forEach(function(details) {
             details.addEventListener('click', function(e) {
-                if (details.open) {
+                if (details.open && !e.target.closest('a')) {
                     e.preventDefault();
                     details.classList.add('closing');
                     details.querySelector('.profile-section-content').addEventListener('animationend', function() {
