@@ -155,6 +155,9 @@
 {{- partial "analytics.html" . }}
 {{ end }}
 
+{{- /* Umami analytics */}}
+<script defer src="https://stats.groes.ch/script.js" data-website-id="86be7482-d960-4d50-b09a-108cca54797c"></script>
+
 {{ if or .Page.Params.math .Site.Params.math }}
 {{- partial "math.html" .}}
 {{ end }} 
