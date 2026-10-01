@@ -91,9 +91,8 @@
 {{- end }}
 
 {{- /* Favicons */}}
-<link rel="icon" href="{{ site.Params.assets.favicon | default "favicon.ico" | absURL }}">
-<link rel="icon" type="image/png" sizes="16x16" href="{{ site.Params.assets.favicon16x16 | default "favicon-16x16.png" | absURL }}">
-<link rel="icon" type="image/png" sizes="32x32" href="{{ site.Params.assets.favicon32x32 | default "favicon-32x32.png" | absURL }}">
+<link rel="icon" href="{{ site.Params.assets.favicon | default "favicon.ico" | absURL }}" sizes="any">
+<link rel="icon" type="image/svg+xml" href="{{ "favicon.svg" | absURL }}">
 <link rel="apple-touch-icon" href="{{ site.Params.assets.apple_touch_icon | default "apple-touch-icon.png" | absURL }}">
 <!-- <link rel="mask-icon" href="{{ site.Params.assets.safari_pinned_tab | default "safari-pinned-tab.svg" | absURL }}"> -->
 <meta name="theme-color" content="{{ site.Params.assets.theme_color | default "#2e2e33" }}">
@@ -154,6 +153,16 @@
 {{ if and (hugo.IsProduction) (.Site.Params.googleAnalyticsID) }}
 {{- partial "analytics.html" . }}
 {{ end }}
+
+{{- /* Apply the stored light/dark choice before first paint */}}
+<script>
+    (function () {
+        try {
+            var t = localStorage.getItem('pref-theme');
+            if (t === 'light' || t === 'dark') document.documentElement.dataset.theme = t;
+        } catch (e) {}
+    })();
+</script>
 
 {{- /* Umami analytics */}}
 <script defer src="https://stats.groes.ch/script.js" data-website-id="86be7482-d960-4d50-b09a-108cca54797c"></script>

@@ -1,0 +1,60 @@
+/* Light/dark switch, fixed in the top right corner */
+.theme-toggle {
+    position: fixed;
+    top: 16px;
+    right: 16px;
+    z-index: 100;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 44px;
+    height: 44px;
+    padding: 0;
+    color: var(--primary);
+    background: none;
+    border: 0;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: opacity .2s;
+}
+
+.theme-toggle:hover {
+    opacity: .6;
+}
+
+.theme-toggle:focus-visible {
+    outline: 2px solid var(--primary);
+    outline-offset: 2px;
+}
+
+.theme-toggle span {
+    display: flex;
+}
+
+/* Light: offer the moon; dark: offer the sun */
+.theme-toggle .i-sun {
+    display: none;
+}
+
+:root[data-theme="dark"] .theme-toggle .i-sun {
+    display: flex;
+}
+
+:root[data-theme="dark"] .theme-toggle .i-moon {
+    display: none;
+}
+
+@media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) .theme-toggle .i-sun {
+        display: flex;
+    }
+
+    :root:not([data-theme="light"]) .theme-toggle .i-moon {
+        display: none;
+    }
+}
+
+/* Article pages have the theme's 44px header bar: sit inside it */
+body:not(.list) .theme-toggle {
+    top: 0;
+}
