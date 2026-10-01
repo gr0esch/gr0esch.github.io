@@ -1,0 +1,12 @@
+/* More breathing room on small screens (overrides the theme's 14px gap from zmedia.css) */
+@media screen and (max-width: 768px) {
+    :root {
+        --gap: 28px;
+    }
+}
+
+@media screen and (max-width: 380px) {
+    :root {
+        --gap: 22px;
+    }
+}
