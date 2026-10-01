@@ -57,6 +57,17 @@
     color: var(--body);
 }
 
+.profile-bio a {
+    color: var(--primary);
+    text-decoration: underline;
+    text-decoration-thickness: 1px;
+    text-underline-offset: 3px;
+}
+
+.profile-bio a:hover {
+    opacity: .7;
+}
+
 /* Social icons */
 .profile .social-icons {
     display: flex;

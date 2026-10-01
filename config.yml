@@ -52,7 +52,7 @@ params:
     profileMode:
           enabled: true
           title: Samuel Groesch
-          subtitle: "I am a Research and Teaching Associate in the Media & Internet Governance Division at the University of Zurich, holding an MSc in Data & Society from LSE and a BA in Communication & Politics from Zeppelin University. My research interests include platform governance, focusing on the Digital Services Act, as well as computational methods."
+          subtitle: "I am a Research and Teaching Associate in the Media & Internet Governance Division at the University of Zurich, holding an MSc in Data & Society from LSE and a BA in Communication & Politics from Zeppelin University. My research interests include platform governance, focusing on the Digital Services Act, as well as computational methods. In my free time I run or <a href='https://samuelgroesch.de' target='_blank' rel='noopener'>take photos</a>."
           imageUrl: "/picture_new.jpg"
           imageWidth: 170
           imageHeight: 170
