@@ -1,37 +1,36 @@
-<dialog class="imprint" id="imprint" aria-labelledby="imprint-title" lang="de">
+<dialog class="imprint" id="imprint" aria-labelledby="imprint-title">
 <div class="imprint-body">
     <div class="imprint-head">
-        <h2 id="imprint-title">Impressum</h2>
-        <button type="button" class="imprint-close" aria-label="Schließen" data-imprint-close>
+        <h2 id="imprint-title">Imprint</h2>
+        <button type="button" class="imprint-close" aria-label="Close" data-imprint-close>
             {{- partial "icon_fine.html" (dict "name" "close" "size" 18 "stroke" 1.2) -}}
         </button>
     </div>
     <div class="imprint-row imprint-grid">
         <div class="imprint-stack">
-            <p>Samuel Groesch<br>Gymnasiumstraße 4<br>55116 Mainz<br>Deutschland</p>
+            <p>Samuel Groesch<br>Gymnasiumstraße 4<br>55116 Mainz<br>Germany</p>
             {{- /* Address is assembled by JS so it never appears in the HTML source */}}
             <p><a href="#" class="imprint-mail" data-u="samuel" data-d="groes.ch" data-imprint-mail>samuel [at] groes.ch</a></p>
         </div>
         <div>
-            <h3>Zustellbevollmächtigter in Rechtssachen</h3>
-            <p>PRIGGE Recht<br>Rechtsanwalt Dr. Jasper Prigge<br>Sternstraße 58<br>40479 Düsseldorf</p>
+            <h3>Authorised agent for service of legal documents</h3>
+            <p>PRIGGE Recht<br>Dr. Jasper Prigge, attorney at law<br>Sternstraße 58<br>40479 Düsseldorf</p>
         </div>
     </div>
     <div class="imprint-row imprint-small">
-        <h3>Urheberrecht</h3>
-        <p>Die Inhalte dieser Website sind urheberrechtlich geschützt. Jede Verwertung außerhalb der engen Grenzen des
-            Urheberrechtsgesetzes bedarf der vorherigen schriftlichen Zustimmung des Urhebers.</p>
+        <h3>Copyright</h3>
+        <p>The content of this website is protected by copyright. Any use beyond the narrow limits of copyright law
+            requires the prior written consent of the author.</p>
     </div>
     <div class="imprint-small">
-        <h3>Datenschutz</h3>
-        <p>Diese Website nutzt zur anonymen Reichweitenmessung den selbst gehosteten, quelloffenen Analysedienst Umami.
-            Dabei werden keine Cookies gesetzt, keine IP-Adressen gespeichert und keine personenbezogenen Daten an Dritte
-            übermittelt (Art. 6 Abs. 1 lit. f DSGVO).</p>
-        <p>Gehostet wird die Seite über GitHub Pages (GitHub Inc., USA). Beim Aufruf verarbeitet GitHub technisch
-            notwendige Server-Logs, einschließlich der IP-Adresse, zum sicheren Betrieb (Art. 6 Abs. 1 lit. f DSGVO).
-            Sie haben das Recht auf Auskunft, Berichtigung, Löschung, Einschränkung der Verarbeitung,
-            Datenübertragbarkeit sowie ein Beschwerderecht bei einer Aufsichtsbehörde. Anfragen bitte an die oben
-            genannte E-Mail-Adresse.</p>
+        <h3>Privacy</h3>
+        <p>This website uses Umami, a self-hosted, open-source analytics service, to measure visits anonymously. No
+            cookies are set, no IP addresses are stored and no personal data is passed on to third parties
+            (Art. 6(1)(f) GDPR).</p>
+        <p>The site is hosted on GitHub Pages (GitHub Inc., USA). When you visit, GitHub processes technically necessary
+            server logs, including your IP address, to operate the service securely (Art. 6(1)(f) GDPR). You have the
+            right to access, rectification, erasure, restriction of processing and data portability, and the right to
+            lodge a complaint with a supervisory authority. Please send any requests to the email address above.</p>
     </div>
 </div>
 </dialog>

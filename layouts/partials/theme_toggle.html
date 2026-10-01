@@ -1,0 +1,24 @@
+<button type="button" class="theme-toggle" id="theme-switch" aria-label="Switch between light and dark mode" title="Light / dark mode">
+    <span class="i-moon">{{ partial "icon_fine.html" (dict "name" "moon" "size" 19 "stroke" 1.2) }}</span>
+    <span class="i-sun">{{ partial "icon_fine.html" (dict "name" "sun" "size" 19 "stroke" 1.2) }}</span>
+</button>
+<script>
+(function () {
+    var btn = document.getElementById('theme-switch');
+    var root = document.documentElement;
+    var media = window.matchMedia('(prefers-color-scheme: dark)');
+    function current() {
+        return root.dataset.theme || (media.matches ? 'dark' : 'light');
+    }
+    function label() {
+        btn.setAttribute('aria-label', current() === 'dark' ? 'Switch to light mode' : 'Switch to dark mode');
+    }
+    btn.addEventListener('click', function () {
+        var next = current() === 'dark' ? 'light' : 'dark';
+        root.dataset.theme = next;
+        try { localStorage.setItem('pref-theme', next); } catch (e) {}
+        label();
+    });
+    label();
+})();
+</script>

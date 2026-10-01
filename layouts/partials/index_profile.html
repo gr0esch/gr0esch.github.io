@@ -14,7 +14,7 @@
         <h1 class="profile-name">{{ .title | default site.Title | markdownify }}</h1>
         <p class="profile-bio">{{ .subtitle | markdownify }}</p>
 
-        {{- $labels := dict "camera" "Photography" "cv" "CV" "twitter" "X / Twitter" "linkedin" "LinkedIn" "github" "GitHub" "email" "Email" }}
+        {{- $labels := dict "camera" "Photography" "uzh" "UZH profile" "twitter" "X / Twitter" "linkedin" "LinkedIn" "github" "GitHub" "email" "Email" }}
         <div class="social-icons">
             {{- range site.Params.socialIcons }}
             {{- $key := lower .name }}

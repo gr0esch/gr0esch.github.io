@@ -38,8 +38,9 @@
     color-scheme: light;
 }
 
+/* Dark mode: follows the system unless the visitor picked a theme with the toggle (data-theme on <html>) */
 @media (prefers-color-scheme: dark) {
-    :root {
+    :root:not([data-theme="light"]) {
         --theme: #0e0e0f;
         --entry: #161617;
         --primary: #f0f0ee;
@@ -55,6 +56,23 @@
         --lightpurple: #222223;
         color-scheme: dark;
     }
+}
+
+:root[data-theme="dark"] {
+    --theme: #0e0e0f;
+    --entry: #161617;
+    --primary: #f0f0ee;
+    --secondary: #9a9a97;
+    --tertiary: #2a2a2b;
+    --content: #e4e4e2;
+    --body: #c9c9c6;
+    --hljs-bg: #161617;
+    --code-bg: #1b1b1c;
+    --border: rgba(240, 240, 238, .09);
+    --rule: rgba(240, 240, 238, .35);
+    --midpurple: #3a3a3b;
+    --lightpurple: #222223;
+    color-scheme: dark;
 }
 
 .list {
