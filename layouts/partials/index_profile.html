@@ -2,93 +2,102 @@
     {{- with site.Params.profileMode }}
     <div class="profile_inner">
         {{- if .imageUrl -}}
-        {{- $img := "" }}
+        {{- $src := .imageUrl | absURL }}
         {{- if not (urls.Parse .imageUrl).IsAbs }}
-            {{- $img = resources.Get .imageUrl }}
-        {{- end }}
-        {{- if $img }}
-            {{- $processableFormats := (slice "jpg" "jpeg" "png" "tif" "bmp" "gif") -}}
-            {{- if hugo.IsExtended -}}
-                {{- $processableFormats = $processableFormats | append "webp" -}}
-            {{- end -}}
-            {{- $prod := (hugo.IsProduction | or (eq site.Params.env "production")) }}
-            {{- if and (in $processableFormats $img.MediaType.SubType) (eq $prod true)}}
-                {{- if (not (and (not .imageHeight) (not .imageWidth))) }}
-                    {{- $img = $img.Resize (printf "%dx%d" .imageWidth .imageHeight) }}
-                {{- else if .imageHeight }}
-                    {{- $img = $img.Resize (printf "x%d" .imageHeight) }}
-                {{ else if .imageWidth }}
-                    {{- $img = $img.Resize (printf "%dx" .imageWidth) }}
-                {{ else }}
-                    {{- $img = $img.Resize "150x150" }}
-                {{- end }}
+            {{- with resources.Get .imageUrl }}
+                {{- $src = (.Fill "340x340 Center q85").Permalink }}
             {{- end }}
-            <img draggable="false" src="{{ $img.Permalink }}" alt="{{ .imageTitle | default "profile image" }}" title="{{ .imageTitle }}"
-                height="{{ .imageHeight | default 150 }}" width="{{ .imageWidth | default 150 }}" />
-        {{- else }}
-        <img draggable="false" src="{{ .imageUrl | absURL }}" alt="{{ .imageTitle | default "profile image" }}" title="{{ .imageTitle }}"
-            height="{{ .imageHeight | default 150 }}" width="{{ .imageWidth | default 150 }}" />
         {{- end }}
+        <img class="profile-photo" draggable="false" src="{{ $src }}" alt="{{ .imageTitle | default "profile image" }}"
+            width="170" height="170" />
         {{- end }}
-        <h1>{{ .title | default site.Title | markdownify }}</h1>
-        <span>{{ .subtitle | markdownify }}</span>
+        <h1 class="profile-name">{{ .title | default site.Title | markdownify }}</h1>
+        <p class="profile-bio">{{ .subtitle | markdownify }}</p>
 
-        {{- partial "social_icons.html" site.Params.socialIcons -}}
-
-        <details class="profile-section">
-            <summary>Published articles</summary>
-            <div class="profile-section-content">
-                <p><strong>Groesch, S.</strong>, Birrer, A., Just, N., &amp; Saurwein, F. (2026). Big data, small answers: How the DSA Transparency Database falls short of its regulatory objectives. <em>Telecommunications Policy</em>. <a href="https://doi.org/10.1016/j.telpol.2025.103088" target="_blank" rel="noopener noreferrer">https://doi.org/10.1016/j.telpol.2025.103088</a></p>
-            </div>
-        </details>
-
-        <details class="profile-section">
-            <summary>Software &amp; Tools</summary>
-            <div class="profile-section-content">
-                <ul>
-                    <li><a href="https://flighttoics.groes.ch" target="_blank" rel="noopener noreferrer">Flight to Calendar</a></li>
-                    <li><a href="https://github.com/gr0esch/Academic-Book-PDF-Merger" target="_blank" rel="noopener noreferrer">Academic Book PDF Merger</a></li>
-                    <li><a href="https://welchesbadi.ch/" target="_blank" rel="noopener noreferrer">Which Badi?</a></li>
-                    <li><a href="https://zrh.groes.ch/" target="_blank" rel="noopener noreferrer">ZRH Airport - Waiting Times and Predictions</a></li>
-                    <li><a href="https://papers.groes.ch/" target="_blank" rel="noopener noreferrer">Paperzzz - Academic Paper Briefing and Digest</a></li>
-                </ul>
-            </div>
-        </details>
-
-        <script>
-        document.querySelectorAll('.profile-section').forEach(function(details) {
-            details.addEventListener('click', function(e) {
-                if (details.open && !e.target.closest('a')) {
-                    e.preventDefault();
-                    details.classList.add('closing');
-                    details.querySelector('.profile-section-content').addEventListener('animationend', function() {
-                        details.classList.remove('closing');
-                        details.removeAttribute('open');
-                    }, { once: true });
-                }
-            });
-        });
-        </script>
-
-        {{- with .buttons }}
-        <div class="buttons">
-            {{- range . }}
-            <a class="button" href="{{ trim .url " " }}" rel="noopener" title="{{ .name }}">
-                <span class="button-inner">
-                    {{ .name }}
-                    {{- if (findRE "://" .url) }}&nbsp;
-                    <svg fill="none" shape-rendering="geometricPrecision" stroke="currentColor" stroke-linecap="round"
-                        stroke-linejoin="round" stroke-width="2.5" viewBox="0 0 24 24" height="14" width="14">
-                        <path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"></path>
-                        <path d="M15 3h6v6"></path>
-                        <path d="M10 14L21 3"></path>
-                    </svg>
-                    {{- end }}
-                </span>
+        {{- $labels := dict "camera" "Photography" "cv" "CV" "twitter" "X / Twitter" "linkedin" "LinkedIn" "github" "GitHub" "email" "Email" }}
+        <div class="social-icons">
+            {{- range site.Params.socialIcons }}
+            {{- $key := lower .name }}
+            {{- $label := index $labels $key | default .name }}
+            <a href="{{ trim .url " " }}" target="_blank" rel="noopener noreferrer me" title="{{ $label }}" aria-label="{{ $label }}">
+                {{- partial "icon_fine.html" (dict "name" $key "size" 21) -}}
             </a>
             {{- end }}
         </div>
-        {{- end }}
     </div>
-    {{- end}}
+    {{- end }}
+
+    {{- with site.Data.profile }}
+    <div class="profile-sections">
+        <details class="profile-section">
+            <summary><span class="ps-label">Research</span><span class="ps-title">Published articles</span>{{ partial "icon_fine.html" (dict "name" "plus" "size" 18 "stroke" 1.2) }}</summary>
+            <div class="profile-section-content">
+                {{- range .articles }}
+                <article class="article-card">
+                    <div class="ps-label">{{ .year }} &middot; {{ .venue }}</div>
+                    <h2 class="article-title">{{ .title }}</h2>
+                    <p class="article-summary">{{ .summary }}</p>
+                    <div class="article-foot">
+                        <div class="article-authors">{{ .authors | safeHTML }}</div>
+                        <a href="{{ .url }}" target="_blank" rel="noopener noreferrer">Read the article {{ partial "icon_fine.html" (dict "name" "arrow" "size" 12 "stroke" 1.5) }}</a>
+                    </div>
+                </article>
+                {{- end }}
+            </div>
+        </details>
+
+        <details class="profile-section">
+            <summary><span class="ps-label">Building</span><span class="ps-title">Software &amp; Tools</span>{{ partial "icon_fine.html" (dict "name" "plus" "size" 18 "stroke" 1.2) }}</summary>
+            <div class="profile-section-content">
+                <div class="tool-grid">
+                    {{- range .tools }}
+                    <a class="tool-card" href="{{ .url }}" target="_blank" rel="noopener noreferrer">
+                        <span class="tool-icon">{{ partial "icon_fine.html" (dict "name" .icon "size" 24) }}</span>
+                        <span class="tool-kind">{{ .kind }}</span>
+                        <span class="tool-name">{{ .name }}</span>
+                        <span class="tool-tagline">{{ .tagline | safeHTML }}</span>
+                        <span class="tool-desc">{{ .description }}</span>
+                        <span class="tool-link">{{ .host }} {{ partial "icon_fine.html" (dict "name" "arrow" "size" 12 "stroke" 1.5) }}</span>
+                    </a>
+                    {{- end }}
+                </div>
+            </div>
+        </details>
+    </div>
+    {{- end }}
 </div>
+
+<script>
+(function () {
+    var reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+    // Animate closing of the expandable sections
+    document.querySelectorAll('.profile-section').forEach(function (details) {
+        details.addEventListener('click', function (e) {
+            if (!reduceMotion && details.open && e.target.closest('summary')) {
+                e.preventDefault();
+                details.classList.add('closing');
+                details.querySelector('.profile-section-content').addEventListener('animationend', function () {
+                    details.classList.remove('closing');
+                    details.removeAttribute('open');
+                }, { once: true });
+            }
+        });
+    });
+
+    // Gently shrink photo and name while scrolling (not sticky)
+    if (reduceMotion) return;
+    var profile = document.querySelector('.profile');
+    if (!profile) return;
+    var ticking = false;
+    function update() {
+        var r = Math.min(1, Math.max(0, window.scrollY / 260));
+        profile.style.setProperty('--shrink', (r * (2 - r)).toFixed(3));
+        ticking = false;
+    }
+    window.addEventListener('scroll', function () {
+        if (!ticking) { ticking = true; window.requestAnimationFrame(update); }
+    }, { passive: true });
+    update();
+})();
+</script>

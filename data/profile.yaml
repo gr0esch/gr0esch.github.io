@@ -1,0 +1,59 @@
+# Content for the profile page (layouts/partials/index_profile.html)
+
+articles:
+  - year: 2026
+    venue: Telecommunications Policy
+    title: "Big data, small answers: How the DSA Transparency Database falls short of its regulatory objectives"
+    summary: >-
+      Platforms in the EU must log every content moderation decision in the DSA Transparency Database.
+      We ask whether this enormous dataset delivers the transparency the Digital Services Act promises
+      — and find that it mostly does not.
+    authors: "<strong>Groesch, S.</strong>, Birrer, A., Just, N., &amp; Saurwein, F."
+    url: https://doi.org/10.1016/j.telpol.2025.103088
+
+tools:
+  - name: Paperzzz
+    kind: Web app
+    tagline: Academic paper briefing &amp; digest
+    description: >-
+      Watches the journals you follow, gathers every new article in one feed, sends a digest
+      on your schedule and files papers straight into Zotero.
+    url: https://papers.groes.ch/
+    host: papers.groes.ch
+    icon: paper
+  - name: Book PDF Merger
+    kind: Chrome extension
+    tagline: Academic book chapters &rarr; one PDF
+    description: >-
+      Downloads chapter-by-chapter PDFs from publisher book pages (Oxford, Cambridge) and merges
+      them into a single file, in your browser with your own access.
+    url: https://github.com/gr0esch/Academic-Book-PDF-Merger
+    host: github.com
+    icon: merge
+  - name: ZRH Wait Times
+    kind: Live data
+    tagline: Zurich Airport queues
+    description: >-
+      Live security, check-in and passport-control waiting times at Zurich Airport, updated
+      every five minutes, with data-driven estimates for any day.
+    url: https://zrh.groes.ch/
+    host: zrh.groes.ch
+    icon: clock
+  - name: Flight to Calendar
+    kind: Utility
+    tagline: Flight number &rarr; .ics
+    description: >-
+      Turns any flight number into a calendar event with correct departure and arrival times
+      and time zones, ready for Google, Apple or Outlook.
+    url: https://flighttoics.groes.ch
+    host: flighttoics.groes.ch
+    icon: calendar
+  - name: Which Badi?
+    kind: Live data
+    tagline: Zurich&rsquo;s pools and lidos
+    description: >-
+      Live water temperature, visitor numbers and forecast for every public pool and lake bath
+      in Zurich, so you know where to swim today.
+    url: https://welchesbadi.ch/
+    host: welchesbadi.ch
+    icon: waves
