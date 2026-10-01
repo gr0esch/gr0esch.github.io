@@ -35,7 +35,7 @@
                 {{- range .articles }}
                 <article class="article-card">
                     <div class="ps-label">{{ .year }} &middot; {{ .venue }}</div>
-                    <h2 class="article-title">{{ .title }}</h2>
+                    <h2 class="article-title"><a href="{{ .url }}" target="_blank" rel="noopener noreferrer">{{ .title }}</a></h2>
                     <p class="article-summary">{{ .summary }}</p>
                     <div class="article-foot">
                         <div class="article-authors">{{ .authors | safeHTML }}</div>
