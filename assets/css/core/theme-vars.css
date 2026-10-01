@@ -6,19 +6,24 @@
     --header-height: 44px;
     --footer-height: 70px;
     --radius: 8px;
-    --theme: rgb(255, 255, 255);
-    --entry: rgb(255, 255, 255);
-    --primary: rgb(30, 30, 30);
-    --secondary: rgb(108, 108, 108);
-    --tertiary: rgb(214, 214, 214);
-    --gray: rgb(165, 165, 165);
-    --content: rgb(30, 30, 30);
+    --theme: #ffffff;
+    --entry: #ffffff;
+    --primary: #111111;
+    --secondary: #6b6b6b;
+    --tertiary: #e8e8e8;
+    --gray: #a5a5a5;
+    --content: #111111;
+    --body: #3a3a3a;
     --hljs-bg: rgb(28, 29, 33);
-    --code-bg: rgb(245, 245, 245);
-    --border: rgb(238, 238, 238);
-    --darkpurple: #8e7bd0;
-    --midpurple:#c0b5e5;
-    --lightpurple: #e5e1f4;
+    --code-bg: #f5f5f5;
+    --border: #e8e8e8;
+    --rule: #111111;
+    /* legacy accent names, now neutral */
+    --darkpurple: var(--primary);
+    --midpurple: #d6d6d6;
+    --lightpurple: #f0f0f0;
+    --font-serif: 'EB Garamond', Garamond, 'Times New Roman', serif;
+    --font-sans: 'Hanken Grotesk', system-ui, -apple-system, 'Segoe UI', sans-serif;
     --semibold: 500;
     --homesize: 16px;
     --textsize: 18px;
@@ -26,27 +31,32 @@
     --entrysize: 15px;
     --headersize: 16px;
     --footersize: 13px;
-    --lineheight: 1.45;
+    --lineheight: 1.6;
     --lineclamp: 8;
     --marginleft: 26px;
+    --ease: cubic-bezier(.16, 1, .3, 1);
+    color-scheme: light;
 }
 
-.dark {
-    --theme: rgb(29, 30, 32);
-    --entry: rgb(46, 46, 51);
-    --primary: rgb(218, 218, 219);
-    --secondary: rgb(155, 156, 157);
-    --tertiary: rgb(65, 66, 68);
-    --content: rgb(196, 196, 197);
-    --hljs-bg: rgb(46, 46, 51);
-    --code-bg: rgb(55, 56, 62);
-    --border: rgb(51, 51, 51);
+@media (prefers-color-scheme: dark) {
+    :root {
+        --theme: #0e0e0f;
+        --entry: #161617;
+        --primary: #f0f0ee;
+        --secondary: #9a9a97;
+        --tertiary: #2a2a2b;
+        --content: #e4e4e2;
+        --body: #c9c9c6;
+        --hljs-bg: #161617;
+        --code-bg: #1b1b1c;
+        --border: rgba(240, 240, 238, .09);
+        --rule: rgba(240, 240, 238, .35);
+        --midpurple: #3a3a3b;
+        --lightpurple: #222223;
+        color-scheme: dark;
+    }
 }
 
 .list {
-    background: var(--code-bg);
-}
-
-.dark.list {
     background: var(--theme);
 }
