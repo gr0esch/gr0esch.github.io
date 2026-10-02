@@ -20,16 +20,25 @@ tools:
       on your schedule and files papers straight into Zotero.
     url: https://papers.groes.ch/
     host: papers.groes.ch
-    icon: paper
-  - name: Book PDF Merger
-    kind: Chrome extension
-    tagline: Academic book chapters &rarr; one PDF
+    icon: paperzzz
+  - name: EP Staff Register
+    kind: Research database
+    tagline: European Parliament staff &amp; movements
     description: >-
-      Downloads chapter-by-chapter PDFs from publisher book pages (Oxford, Cambridge) and merges
-      them into a single file, in your browser with your own access.
-    url: https://github.com/gr0esch/Academic-Book-PDF-Merger
-    host: github.com
-    icon: merge
+      An independent, continuously updated register of Members of the European Parliament, their
+      accredited and local staff, and movements across all 27 member states.
+    url: https://ep.groes.ch/
+    host: ep.groes.ch
+    icon: euflag
+  - name: Which Badi?
+    kind: Live data
+    tagline: Zurich&rsquo;s pools and lidos
+    description: >-
+      Live water temperature, visitor numbers and forecast for every public pool and lake bath
+      in Zurich, so you know where to swim today.
+    url: https://welchesbadi.ch/
+    host: welchesbadi.ch
+    icon: waves
   - name: ZRH Wait Times
     kind: Live data
     tagline: Zurich Airport queues
@@ -48,12 +57,12 @@ tools:
     url: https://flighttoics.groes.ch
     host: flighttoics.groes.ch
     icon: calendar
-  - name: Which Badi?
-    kind: Live data
-    tagline: Zurich&rsquo;s pools and lidos
+  - name: Book PDF Merger
+    kind: Chrome extension
+    tagline: Academic book chapters &rarr; one PDF
     description: >-
-      Live water temperature, visitor numbers and forecast for every public pool and lake bath
-      in Zurich, so you know where to swim today.
-    url: https://welchesbadi.ch/
-    host: welchesbadi.ch
-    icon: waves
+      Downloads chapter-by-chapter PDFs from publisher book pages (Oxford, Cambridge) and merges
+      them into a single file, in your browser with your own access.
+    url: https://github.com/gr0esch/Academic-Book-PDF-Merger
+    host: github.com
+    icon: merge
