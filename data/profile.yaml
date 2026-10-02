@@ -18,8 +18,8 @@ tools:
     description: >-
       Watches the journals you follow, gathers every new article in one feed, sends a digest
       on your schedule and files papers straight into Zotero.
-    url: https://papers.groes.ch/
-    host: papers.groes.ch
+    url: https://paperzzz.com/
+    host: paperzzz.com
     icon: paperzzz
   - name: EP Staff Register
     kind: Research database
