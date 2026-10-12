@@ -66,3 +66,17 @@ tools:
     url: https://github.com/gr0esch/Academic-Book-PDF-Merger
     host: github.com
     icon: merge
+
+teaching:
+  - level: Bachelor
+    format: Methods Seminar
+    title: Visual Topic Modeling
+    terms: [Fall 2024, Fall 2025]
+  - level: Bachelor
+    format: Seminar
+    title: Governance of Artificial Intelligence
+    terms: [Spring 2025, Spring 2026]
+  - level: Bachelor
+    format: Research Seminar
+    title: Research Seminar and Supervision of Bachelor&rsquo;s Theses
+    terms: [Fall 2026, Spring 2027]

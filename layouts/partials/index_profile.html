@@ -63,6 +63,29 @@
                 </div>
             </div>
         </details>
+
+        {{- with .teaching }}
+        <details class="profile-section">
+            <summary><span class="ps-label">University</span><span class="ps-title">Teaching</span>{{ partial "icon_fine.html" (dict "name" "plus" "size" 18 "stroke" 1.2) }}</summary>
+            <div class="profile-section-content">
+                <ul class="course-list">
+                    {{- range . }}
+                    <li class="course">
+                        <div class="course-main">
+                            <div class="ps-label">{{ .level }} &middot; {{ .format }}</div>
+                            <h2 class="course-title">{{ .title | safeHTML }}</h2>
+                        </div>
+                        <ul class="course-terms" aria-label="Semesters taught">
+                            {{- range .terms }}
+                            <li>{{ . }}</li>
+                            {{- end }}
+                        </ul>
+                    </li>
+                    {{- end }}
+                </ul>
+            </div>
+        </details>
+        {{- end }}
     </div>
     {{- end }}
 </div>
