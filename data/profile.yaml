@@ -1,4 +1,5 @@
 # Content for the profile page (layouts/partials/index_profile.html)
+# A tool with "hidden: true" stays here but is not shown.
 
 articles:
   - year: 2026
@@ -12,6 +13,15 @@ articles:
     url: https://doi.org/10.1016/j.telpol.2025.103088
 
 tools:
+  - name: Frag den Bund
+    kind: Civic platform
+    tagline: Swiss freedom of information requests
+    description: >-
+      Request official documents from the Swiss federal administration under the Freedom of
+      Information Act, in your own name, with the answers published for everyone.
+    url: https://fragdenbund.ch/
+    host: fragdenbund.ch
+    icon: swisscross
   - name: Paperzzz
     kind: Web app
     tagline: Academic paper briefing &amp; digest
@@ -57,7 +67,9 @@ tools:
     url: https://flighttoics.groes.ch
     host: flighttoics.groes.ch
     icon: calendar
+  # Hidden for now; delete the "hidden" line to show it again.
   - name: Book PDF Merger
+    hidden: true
     kind: Chrome extension
     tagline: Academic book chapters &rarr; one PDF
     description: >-
