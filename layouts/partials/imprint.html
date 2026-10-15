@@ -6,16 +6,10 @@
             {{- partial "icon_fine.html" (dict "name" "close" "size" 18 "stroke" 1.2) -}}
         </button>
     </div>
-    <div class="imprint-row imprint-grid">
-        <div class="imprint-stack">
-            <p>Samuel Groesch<br>Gymnasiumstraße 4<br>55116 Mainz<br>Germany</p>
-            {{- /* Address is assembled by JS so it never appears in the HTML source */}}
-            <p><a href="#" class="imprint-mail" data-u="samuel" data-d="groes.ch" data-imprint-mail>samuel [at] groes.ch</a></p>
-        </div>
-        <div>
-            <h3>Authorised agent for service of legal documents</h3>
-            <p>PRIGGE Recht<br>Dr. Jasper Prigge, attorney at law<br>Sternstraße 58<br>40479 Düsseldorf</p>
-        </div>
+    <div class="imprint-row imprint-stack">
+        <p>Samuel Groesch<br>c/o PRIGGE Recht<br>Sternstraße 58<br>40479 Düsseldorf<br>Germany</p>
+        {{- /* Address is assembled by JS so it never appears in the HTML source */}}
+        <p><a href="#" class="imprint-mail" data-u="samuel" data-d="groes.ch" data-imprint-mail>samuel [at] groes.ch</a></p>
     </div>
     <div class="imprint-row imprint-small">
         <h3>Copyright</h3>
